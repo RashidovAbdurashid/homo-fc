@@ -1,0 +1,99 @@
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--teal-deep);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    url('https://images.unsplash.com/photo-1459865264687-595d652de67e?auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-position: center 30%;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,20,17,0.78) 0%, rgba(0,30,25,0.72) 45%, rgba(0,20,17,0.92) 100%);
+}
+
+/* Signature motif: a faint phoenix-wing sweep echoing the crest, built from CSS shapes */
+.hero__wing {
+  position: absolute;
+  top: -10%;
+  right: -8%;
+  width: 60%;
+  height: 120%;
+  background: linear-gradient(135deg, rgba(232,155,22,0.16), rgba(232,155,22,0) 60%);
+  clip-path: polygon(100% 0%, 100% 100%, 35% 100%, 60% 55%, 40% 20%);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  max-width: 760px;
+}
+
+.hero__crest {
+  height: 92px;
+  width: 92px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 28px;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.14);
+}
+
+.hero__eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 14px;
+  color: var(--gold);
+  margin: 0 0 18px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: clamp(40px, 7vw, 76px);
+  line-height: 0.98;
+  margin: 0 0 22px;
+  letter-spacing: 0.01em;
+}
+
+.hero__title-city {
+  display: block;
+  color: var(--gold);
+}
+
+.hero__subtitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(17px, 2vw, 20px);
+  color: rgba(255,255,255,0.86);
+  letter-spacing: 0.04em;
+  margin: 0 0 40px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 560px) {
+  .hero { min-height: 100vh; }
+  .hero__actions .btn { flex: 1 1 auto; }
+}
