@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { FiMapPin, FiPhone, FiMail, FiInstagram, FiFacebook, FiYoutube } from 'react-icons/fi'
 import { useLanguage } from '../context/LanguageContext.jsx'
+import { CLUB_PHONE, CLUB_EMAIL } from '../i18n/contactInfo.js'
 import './Contact.css'
-
-const PHONE = '+998 90 123 45 67'
 
 export default function Contact() {
   const { t } = useLanguage()
@@ -40,14 +39,14 @@ export default function Contact() {
               <FiPhone aria-hidden="true" />
               <div>
                 <span className="contact__list-label">{c.phone}</span>
-                <span>{PHONE}</span>
+                <span>{CLUB_PHONE}</span>
               </div>
             </li>
             <li>
               <FiMail aria-hidden="true" />
               <div>
                 <span className="contact__list-label">{c.email}</span>
-                <span>info@humofc.uz</span>
+                <span>{CLUB_EMAIL}</span>
               </div>
             </li>
           </ul>

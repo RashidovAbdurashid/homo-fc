@@ -1,4 +1,5 @@
 import { useLanguage } from '../context/LanguageContext.jsx'
+import Reveal from './Reveal.jsx'
 import './Team.css'
 
 const PLAYERS = [
@@ -28,29 +29,33 @@ export default function Team() {
           <p className="section-sub team__intro">{t.team.intro}</p>
         </div>
 
-        <div className="coach-card">
-          <div className="coach-card__photo">
-            <img src={COACH_PHOTO} alt={`Portrait of ${t.team.coachName}`} loading="lazy" />
+        <Reveal>
+          <div className="coach-card">
+            <div className="coach-card__photo">
+              <img src={COACH_PHOTO} alt={`Portrait of ${t.team.coachName}`} loading="lazy" />
+            </div>
+            <div className="coach-card__body">
+              <span className="tag coach-card__eyebrow">{t.team.coachEyebrow}</span>
+              <h3 className="coach-card__name">{t.team.coachName}</h3>
+              <span className="coach-card__role">{t.team.coachTitle}</span>
+            </div>
           </div>
-          <div className="coach-card__body">
-            <span className="tag coach-card__eyebrow">{t.team.coachEyebrow}</span>
-            <h3 className="coach-card__name">{t.team.coachName}</h3>
-            <span className="coach-card__role">{t.team.coachTitle}</span>
-          </div>
-        </div>
+        </Reveal>
 
         <div className="team__grid">
-          {PLAYERS.map((p) => (
-            <article className="player-card" key={p.number}>
-              <div className="player-card__photo">
-                <img src={p.photo} alt={`Portrait of ${p.name}`} loading="lazy" />
-                <span className="player-card__number">{p.number}</span>
-              </div>
-              <div className="player-card__body">
-                <h3 className="player-card__name">{p.name}</h3>
-                <span className="player-card__position">{t.team.positions[p.positionKey]}</span>
-              </div>
-            </article>
+          {PLAYERS.map((p, i) => (
+            <Reveal key={p.number} delay={i * 60}>
+              <article className="player-card">
+                <div className="player-card__photo">
+                  <img src={p.photo} alt={`Portrait of ${p.name}`} loading="lazy" />
+                  <span className="player-card__number">{p.number}</span>
+                </div>
+                <div className="player-card__body">
+                  <h3 className="player-card__name">{p.name}</h3>
+                  <span className="player-card__position">{t.team.positions[p.positionKey]}</span>
+                </div>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

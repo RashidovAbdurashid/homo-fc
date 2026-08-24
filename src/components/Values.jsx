@@ -1,5 +1,6 @@
 import { FiHeart, FiTarget, FiUsers, FiAward } from 'react-icons/fi'
 import { useLanguage } from '../context/LanguageContext.jsx'
+import Reveal from './Reveal.jsx'
 import './Values.css'
 
 const ICONS = [FiHeart, FiTarget, FiUsers, FiAward]
@@ -17,11 +18,13 @@ export default function Values() {
           {t.values.items.map((v, i) => {
             const Icon = ICONS[i]
             return (
-              <div className="value-card" key={v.title}>
-                <Icon className="value-card__icon" aria-hidden="true" />
-                <h3>{v.title}</h3>
-                <p>{v.text}</p>
-              </div>
+              <Reveal key={v.title} delay={i * 70}>
+                <div className="value-card">
+                  <Icon className="value-card__icon" aria-hidden="true" />
+                  <h3>{v.title}</h3>
+                  <p>{v.text}</p>
+                </div>
+              </Reveal>
             )
           })}
         </div>

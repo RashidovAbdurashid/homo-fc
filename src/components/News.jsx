@@ -1,4 +1,5 @@
 import { useLanguage } from '../context/LanguageContext.jsx'
+import Reveal from './Reveal.jsx'
 import './News.css'
 
 const IMAGES = [
@@ -20,18 +21,20 @@ export default function News() {
 
         <div className="news__grid">
           {n.items.map((a, i) => (
-            <article className="news-card" key={a.title}>
-              <div className="news-card__image">
-                <img src={IMAGES[i]} alt="" loading="lazy" />
-                <span className="tag news-card__category">{a.category}</span>
-              </div>
-              <div className="news-card__body">
-                <span className="news-card__date">{a.date}</span>
-                <h3 className="news-card__title">{a.title}</h3>
-                <p className="news-card__excerpt">{a.excerpt}</p>
-                <a href="#" className="news-card__link">{n.readMore}</a>
-              </div>
-            </article>
+            <Reveal key={a.title} delay={i * 80}>
+              <article className="news-card">
+                <div className="news-card__image">
+                  <img src={IMAGES[i]} alt="" loading="lazy" />
+                  <span className="tag news-card__category">{a.category}</span>
+                </div>
+                <div className="news-card__body">
+                  <span className="news-card__date">{a.date}</span>
+                  <h3 className="news-card__title">{a.title}</h3>
+                  <p className="news-card__excerpt">{a.excerpt}</p>
+                  <a href="#" className="news-card__link">{n.readMore}</a>
+                </div>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

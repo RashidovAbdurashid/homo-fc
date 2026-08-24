@@ -1,9 +1,8 @@
 import { FiInstagram, FiFacebook, FiYoutube } from 'react-icons/fi'
 import logo from '../assets/humo-logo.png'
 import { useLanguage } from '../context/LanguageContext.jsx'
+import { CLUB_PHONE, CLUB_EMAIL } from '../i18n/contactInfo.js'
 import './Footer.css'
-
-const PHONE = '+998 90 123 45 67'
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -43,8 +42,8 @@ export default function Footer() {
           <h4>{t.footer.contactTitle}</h4>
           <ul className="footer__contact">
             <li>{t.contact.addressValue}</li>
-            <li>{PHONE}</li>
-            <li>info@humofc.uz</li>
+            <li>{CLUB_PHONE}</li>
+            <li>{CLUB_EMAIL}</li>
           </ul>
           <div className="footer__social">
             <a href="#" aria-label="HUMO FC on Instagram"><FiInstagram /></a>

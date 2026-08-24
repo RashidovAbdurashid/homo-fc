@@ -79,8 +79,13 @@ button { font-family: inherit; cursor: pointer; }
   padding: 96px 0;
 }
 
+section[id] {
+  scroll-margin-top: 88px;
+}
+
 @media (max-width: 768px) {
   .section { padding: 64px 0; }
+  section[id] { scroll-margin-top: 76px; }
 }
 
 .eyebrow {
@@ -146,18 +151,20 @@ button { font-family: inherit; cursor: pointer; }
   padding: 15px 30px;
   border: 2px solid transparent;
   border-radius: 3px;
-  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
 }
 
-.btn:active { transform: translateY(1px); }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
 
 .btn-primary {
   background: var(--gold);
   color: #111111;
   border-color: var(--gold);
+  box-shadow: 0 6px 16px rgba(232, 155, 22, 0.28);
 }
-.btn-primary:hover { background: var(--gold-deep); border-color: var(--gold-deep); }
+.btn-primary:hover { background: var(--gold-deep); border-color: var(--gold-deep); box-shadow: 0 10px 22px rgba(232, 155, 22, 0.34); }
 
 .btn-secondary {
   background: transparent;
@@ -208,4 +215,16 @@ button { font-family: inherit; cursor: pointer; }
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+/* Restrained scroll-reveal, used by the Reveal wrapper component */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
 }

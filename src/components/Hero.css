@@ -95,5 +95,8 @@
 
 @media (max-width: 560px) {
   .hero { min-height: 100vh; }
-  .hero__actions .btn { flex: 1 1 auto; }
+  .hero__content { padding-top: 24px; padding-bottom: 56px; }
+  .hero__crest { height: 76px; width: 76px; margin-bottom: 20px; }
+  .hero__actions { flex-direction: column; width: 100%; }
+  .hero__actions .btn { width: 100%; }
 }
