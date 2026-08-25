@@ -96,7 +96,10 @@
 @media (max-width: 560px) {
   .hero { min-height: 100vh; }
   .hero__content { padding-top: 24px; padding-bottom: 56px; }
-  .hero__crest { height: 76px; width: 76px; margin-bottom: 20px; }
-  .hero__actions { flex-direction: column; width: 100%; }
+  .hero__crest { height: 68px; width: 68px; margin-bottom: 18px; }
+  .hero__eyebrow { font-size: 12px; letter-spacing: 0.12em; margin-bottom: 14px; }
+  .hero__title { font-size: clamp(32px, 11vw, 44px); line-height: 1.04; margin-bottom: 16px; }
+  .hero__subtitle { font-size: 15.5px; margin-bottom: 30px; letter-spacing: 0.02em; }
+  .hero__actions { flex-direction: column; width: 100%; gap: 12px; }
   .hero__actions .btn { width: 100%; }
 }

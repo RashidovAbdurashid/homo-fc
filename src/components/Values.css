@@ -55,5 +55,22 @@
   .values__grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 520px) {
-  .values__grid { grid-template-columns: 1fr; }
+  .values__grid { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+
+  .value-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    border-bottom: none;
+    border-left: 4px solid var(--gold);
+  }
+
+  .value-card:hover { transform: none; box-shadow: none; }
+
+  .value-card__icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
 }

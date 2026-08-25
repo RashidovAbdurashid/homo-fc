@@ -151,3 +151,13 @@
   .contact__grid { grid-template-columns: 1fr; gap: 44px; }
   .contact__form-wrap { padding: 26px; }
 }
+
+@media (max-width: 540px) {
+  .contact__grid { gap: 36px; }
+  .contact__form-wrap { padding: 20px; border-radius: 6px; }
+  .contact__list { gap: 18px; margin-top: 28px; }
+  .contact__form { gap: 16px; }
+  .contact__form input,
+  .contact__form textarea { padding: 12px 13px; font-size: 16px; }
+  .contact__social-icons a { width: 44px; height: 44px; }
+}

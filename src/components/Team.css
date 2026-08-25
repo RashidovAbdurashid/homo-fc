@@ -133,10 +133,70 @@
 @media (max-width: 720px) {
   .team__grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
-@media (max-width: 460px) {
-  .team__grid { grid-template-columns: 1fr 1fr; }
-}
 
 @media (max-width: 560px) {
   .coach-card { flex-direction: column; text-align: center; padding: 26px 20px; }
+}
+
+@media (max-width: 540px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .player-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    overflow: visible;
+  }
+
+  .player-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .player-card__photo {
+    width: 68px;
+    height: 68px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .player-card__photo img {
+    border-radius: 50%;
+  }
+
+  .player-card__number {
+    top: auto;
+    left: auto;
+    bottom: -3px;
+    right: -3px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12.5px;
+    border-radius: 50%;
+    border: 2px solid var(--surface);
+  }
+
+  .player-card__body {
+    padding: 0;
+    border-top: none;
+    flex: 1;
+  }
+
+  .player-card__name {
+    font-size: 16.5px;
+    margin-bottom: 2px;
+  }
+
+  .player-card__position {
+    font-size: 12.5px;
+  }
 }

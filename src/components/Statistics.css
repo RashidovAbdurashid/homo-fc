@@ -52,6 +52,10 @@
 }
 
 @media (max-width: 480px) {
-  .stats__grid { grid-template-columns: repeat(2, 1fr); }
+  .stats { padding: 40px 0; }
+  .stats__grid { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
   .stat:not(:last-child)::after { display: none; }
+  .stat:last-child { grid-column: 1 / -1; }
+  .stat__value { font-size: 36px; }
+  .stat__label { font-size: 12px; margin-top: 8px; }
 }

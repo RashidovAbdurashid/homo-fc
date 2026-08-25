@@ -126,5 +126,14 @@
 }
 
 @media (max-width: 900px) {
-  .matches__grid { grid-template-columns: 1fr; }
+  .matches__grid { grid-template-columns: 1fr; gap: 18px; }
+}
+
+@media (max-width: 540px) {
+  .matches__grid { margin-top: 30px; }
+  .match-card { padding: 20px 18px 18px; gap: 18px; }
+  .match-card__crest { height: 46px; width: 46px; }
+  .match-card__team span:last-child { font-size: 12px; }
+  .match-card__competition { font-size: 11px; }
+  .match-card__meta-value { font-size: 14px; }
 }

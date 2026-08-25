@@ -101,11 +101,34 @@
 @media (max-width: 900px) {
   .about__grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 0;
   }
+  .about__media { margin-bottom: 44px; }
   .about__media-tag {
-    left: 0;
-    right: 0;
-    margin: 0 16px;
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: -32px 20px 0;
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .about__media img { aspect-ratio: 4 / 3.4; }
+  .about__media-tag {
+    margin: -24px 14px 0;
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .about__media-tag-num { font-size: 28px; }
+  .about__media-tag span:last-child { font-size: 12.5px; }
+  .about__lead { font-size: 17px; }
+  .about__body { font-size: 15px; line-height: 1.68; }
+  .about__facts {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 18px;
+    margin-top: 28px;
+    padding-top: 20px;
   }
 }

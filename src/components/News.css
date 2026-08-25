@@ -97,5 +97,13 @@
 }
 
 @media (max-width: 900px) {
-  .news__grid { grid-template-columns: 1fr; }
+  .news__grid { grid-template-columns: 1fr; gap: 18px; }
+}
+
+@media (max-width: 540px) {
+  .news__grid { margin-top: 28px; }
+  .news-card__image { aspect-ratio: 16 / 11; }
+  .news-card__body { padding: 16px 18px 20px; }
+  .news-card__title { font-size: 18.5px; }
+  .news-card__excerpt { font-size: 14px; }
 }

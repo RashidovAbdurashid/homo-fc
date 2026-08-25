@@ -12,6 +12,7 @@ export default function About() {
           <img
             src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=1000&q=80"
             alt="HUMO FC players training on the pitch"
+            loading="lazy"
           />
           <div className="about__media-tag">
             <span className="about__media-tag-num">{a.mediaNum}</span>

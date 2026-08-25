@@ -112,3 +112,14 @@
 @media (max-width: 820px) {
   .footer__grid { grid-template-columns: 1fr; gap: 32px; }
 }
+
+@media (max-width: 540px) {
+  .footer__grid { padding: 44px 20px 32px; gap: 30px; }
+  .footer__brand { gap: 14px; }
+  .footer__brand img { height: 46px; width: 46px; }
+  .footer__name { font-size: 20px; }
+  .footer__desc { font-size: 13.5px; max-width: none; }
+  .footer__social a { width: 42px; height: 42px; }
+  .footer__bottom { padding: 18px 20px; }
+  .footer__bottom p { font-size: 12px; line-height: 1.5; }
+}

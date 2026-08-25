@@ -24,7 +24,7 @@ export default function News() {
             <Reveal key={a.title} delay={i * 80}>
               <article className="news-card">
                 <div className="news-card__image">
-                  <img src={IMAGES[i]} alt="" loading="lazy" />
+                    <img src={IMAGES[i]} alt="" loading="lazy" />
                   <span className="tag news-card__category">{a.category}</span>
                 </div>
                 <div className="news-card__body">
